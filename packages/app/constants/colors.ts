@@ -1,0 +1,22 @@
+// Color constants matching trend-next-website
+export const COLORS = {
+  BLACK: '#000',
+  BLACK_2: '#141414',
+  BLACK_3: '#121212',
+  WHITE: '#FFFFFF',
+  BLUE: '#188BFF',
+  LIGHT_BLUE: '#76BAFF',
+  GREY_2: '#3C3B3B',
+  GREY_3: '#666666',
+  GREY_5: '#757575',
+  DARK_GREY: '#A6A6A6',
+  INPUT_BACKGROUND_BLACK: '#1F1F1F',
+  INPUT_BACKGROUND_BLACK_2: '#292929',
+  INPUT_BACKGROUND_BLACK_3: '#3C3B3B',
+  LIGHT_GREY: '#A7A7A7',
+  RED_2: '#FF0000',
+  GREEN: '#34A043',
+  DARK_GREY_4: '#252525',
+  LIGHT_GREY_2: '#babcbf',
+}
+

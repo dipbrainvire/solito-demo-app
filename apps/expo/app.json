@@ -1,0 +1,23 @@
+{
+  "expo": {
+    "name": "solitotwo",
+    "slug": "your-app-slug",
+    "version": "1.0.0",
+    "entryPoint": "../../packages/app/index.js",
+    "scheme": "solito-blank",
+    "platforms": [
+      "ios",
+      "android"
+    ],
+    "ios": {
+      "bundleIdentifier": "com.solito.blank"
+    },
+    "newArchEnabled": true,
+    "experiments": {
+      "reactCanary": true
+    },
+    "android": {
+      "package": "com.solito.blank"
+    }
+  }
+}

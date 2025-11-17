@@ -1,0 +1,40 @@
+{
+  "name": "solito-blank",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "@types/react": "^18.2.21",
+    "eslint": "^8.21.0",
+    "react-native-svg-transformer": "^1.5.2",
+    "turbo": "^2.4.4",
+    "typescript": "^5.2.2"
+  },
+  "scripts": {
+    "native": "cd apps/expo && yarn start",
+    "web": "cd apps/next && yarn next"
+  },
+  "packageManager": "yarn@4.7.0",
+  "eslintConfig": {
+    "extends": "next",
+    "settings": {
+      "next": {
+        "rootDir": "apps/next/"
+      }
+    },
+    "root": true
+  },
+  "prettier": {
+    "semi": false,
+    "useTabs": false,
+    "tabWidth": 2,
+    "singleQuote": true
+  },
+  "dependencies": {
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0",
+    "react-native-svg": "^15.15.0"
+  }
+}

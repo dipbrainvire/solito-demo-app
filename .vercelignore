@@ -1,0 +1,7 @@
+apps/expo
+node_modules
+.git
+.next
+.DS_Store
+*.log
+
