@@ -2,7 +2,6 @@
   "buildCommand": "npm install --force && cd apps/next && npm run build",
   "outputDirectory": "apps/next/.next",
   "installCommand": "npm install --force",
-  "framework": "nextjs",
-  "nodeVersion": "20.x"
+  "framework": "nextjs"
 }
 
