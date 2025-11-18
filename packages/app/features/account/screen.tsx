@@ -31,8 +31,13 @@ export function AccountScreen() {
       onTabChange={handleTabChange}
       onSearch={handleSearch}
     >
-      <View style={styles.container}>
-        <ScrollView 
+      <View
+        style={[
+          styles.container,
+          isWeb && ({ minHeight: 'calc(100vh - 60px)' } as any)
+        ]}
+      >
+        <ScrollView
           contentContainerStyle={styles.scrollContent}
           style={styles.scrollView}
         >
@@ -53,7 +58,7 @@ export function AccountScreen() {
             </View>
 
             {/* Logout Button */}
-            <TouchableOpacity 
+            <TouchableOpacity
               style={styles.logoutButton}
               onPress={handleLogout}
               activeOpacity={0.8}
@@ -131,12 +136,14 @@ const styles = StyleSheet.create({
   },
   logoutButton: {
     width: '100%',
-    paddingVertical: 16,
+    paddingVertical: 12,
+    maxWidth: 300,
     backgroundColor: COLORS.BLUE,
     borderRadius: 12,
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: 40,
+    marginTop: 20,
+    marginHorizontal: 'auto',
     ...(Platform.OS === 'web' && {
       cursor: 'pointer',
       transition: 'all 0.3s ease',

@@ -18,6 +18,11 @@
     },
     "android": {
       "package": "com.solito.blank"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "6239d26f-1942-41e1-b783-c7896a32ee07"
+      }
     }
   }
 }

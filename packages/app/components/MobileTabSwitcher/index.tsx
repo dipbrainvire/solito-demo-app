@@ -4,6 +4,7 @@ import { COLORS } from 'app/constants/colors'
 import React from 'react'
 import { View, TouchableOpacity, Text, StyleSheet, Platform } from 'react-native'
 import { useRouter } from 'solito/navigation'
+import { useSafeArea } from 'app/provider/safe-area/use-safe-area'
 
 interface Props {
   activeTab: 'home' | 'shop' | 'account'
@@ -11,6 +12,7 @@ interface Props {
 
 export function MobileTabSwitcher({ activeTab }: Props) {
   const router = useRouter()
+  const safeArea = useSafeArea()
 
   const goTo = (tab: 'home' | 'shop' | 'account') => {
     if (tab === 'home') {
@@ -23,7 +25,7 @@ export function MobileTabSwitcher({ activeTab }: Props) {
   }
 
   return (
-    <View style={styles.container}>
+    <View style={[styles.container, { paddingBottom: Platform.OS === 'web' ? 0 : safeArea.bottom }]}>
       <TouchableOpacity
         style={styles.tab}
         onPress={() => goTo('home')}
@@ -57,10 +59,10 @@ export function MobileTabSwitcher({ activeTab }: Props) {
 const styles = StyleSheet.create({
   container: {
     position: 'absolute',
-    bottom: Platform.OS === 'web' ? 0 : 20,
+    bottom: Platform.OS === 'web' ? 0 : 0,
     left: 0,
     right: 0,
-    height: 60,
+    minHeight: 60,
     flexDirection: 'row',
     backgroundColor: '#111',
     borderTopWidth: 1,
@@ -68,6 +70,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-around',
     alignItems: 'center',
     paddingHorizontal: 20,
+    paddingTop: 10,
     zIndex: 100,
   },
   tab: {

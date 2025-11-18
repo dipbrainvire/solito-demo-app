@@ -11,8 +11,11 @@ import {
   Image,
 } from "react-native";
 import { TextLink } from "solito/link";
+import { useRouter } from "solito/navigation";
 
 export function LoginScreen() {
+  const router = useRouter()
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [showPassword, setShowPassword] = useState(false);
@@ -70,10 +73,8 @@ export function LoginScreen() {
           </TouchableOpacity>
 
           {/* LOGIN BUTTON */}
-          <TouchableOpacity style={styles.loginBtn}>
-            <TextLink href="/home">
+          <TouchableOpacity style={styles.loginBtn} onPress={() => router.push('/home')}>
               <Text style={styles.loginText}>Login</Text>
-            </TextLink>
           </TouchableOpacity>
 
           {/* OR */}

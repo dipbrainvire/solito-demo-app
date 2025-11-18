@@ -710,7 +710,7 @@ export function ProductScreen() {
               }}
             >
               <HeroBanner />
-              <SliderDots />
+              {/* <SliderDots /> */}
 
               <Text
                 style={{
